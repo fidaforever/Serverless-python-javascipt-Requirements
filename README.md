@@ -1,21 +1,24 @@
 # Serverless-python-javascipt-Requirements
 Serverless with Python Requirements Javascript action that runs a Serverless deploy using the serverless-python-requirements plugin.
-Inputs
-args
-Optional Additional arguments you want to set.
 
-Environment Variables
+### Inputs
+args
+### Optional Additional arguments you want to set.
+
+### Environment Variables
 aws-access-key-id
-Conditional Your aws access key id.
+### Conditional Your aws access key id.
 
 aws-secret-access-key
-Conditional Your aws secret access key.
+### Conditional Your aws secret access key.
 
 serverless-access-key
-Conditional Your serverless access key.
+### Conditional Your serverless access key.
 
-Example usage
-AWS Credentials
+### Example usage
+
+#### AWS Credentials
+```ruby
 - name: Set up Node
   uses: actions/setup-node@v1
   with:
@@ -33,7 +36,11 @@ AWS Credentials
   env:
     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-Serverless Access Key
+    
+    
+    
+#### Serverless Access Key
+
 - name: Set up Node
   uses: actions/setup-node@v1
   with:
@@ -50,3 +57,4 @@ Serverless Access Key
     args: '--stage dev'
   env:
     SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+    
